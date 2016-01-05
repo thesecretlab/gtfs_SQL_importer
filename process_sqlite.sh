@@ -2,11 +2,13 @@
 
 DESTINATION_FOLDER="./output"
 
+# Ensure that the script has the right number of arguments
 if [ $# -neq 2 ] ; then
 	echo "Usage: process.sh <source folder> <destination file>"
 	echo "Destination file will be placed in $DESTINATION_FOLDER/"
 fi
 
+# Create the output folder if it doesn't exist
 if [ ! -d $DESTINATION_FOLDER ] ; then
 	mkdir $DESTINATION_FOLDER
 fi
